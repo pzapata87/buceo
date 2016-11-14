@@ -1,0 +1,140 @@
+﻿@{
+    ViewBag.Title = "Serbuvaliente";
+}
+
+<div class="navbar">
+    <div class="navbar-inner">
+        <div class="container">
+            <a href="#" class="brand">
+                <!-- This is website logo -->
+                <img src="@Url.Content("~/Content/images/logo.png")" alt="Logo"/>
+            </a>
+            <!-- Navigation button, visible on small resolution -->
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <i class="icon-menu"></i>
+            </button>
+            <!-- Main navigation -->
+            <div class="nav-collapse collapse pull-right">
+                <ul class="nav" id="top-navigation">
+                    <li class="active"><a href="#home">Inicio</a></li>
+                    <li><a href="#service">Servicios</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#about">Sobre Nosotros</a></li>
+                    <li><a href="#clients">Clientes</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
+            </div>
+            <!-- End main navigation -->
+        </div>
+    </div>
+</div>
+<!-- Start home section -->
+<div id="home">
+    <!-- Start cSlider -->
+    <div id="da-slider" class="da-slider">
+        <div class="triangle"></div>
+        <!-- mask elemet use for masking background image -->
+        <div class="mask"></div>
+        <!-- All slides centred in container element -->
+        <div class="container">
+            <!-- Start first slide -->
+            <div class="da-slide">
+                <h2 class="fittext2">Bienvenidos a Serbuvaliente</h2>
+                <h4>Quienes somos</h4>
+                <p>Somos la más experimentada empresa en mantenimiento subacuático. Nos especializamos en mantenimientos preventivos o correctivos, limpiezas, trabajos de soldadura subacuática u otros como rescates subacuáticos y demás.</p>
+                <a href="#about" class="da-link button">Leer más</a>
+                <div class="da-img">
+                    <img src="@Url.Content("~/Content/images/Slider01.jpg")" alt="image01" width="320">
+                </div>
+            </div>
+            <!-- End first slide -->
+            <!-- Start second slide -->
+            <div class="da-slide">
+                <h2>Nuestro Equipo</h2>
+                <h4>Equipo humano y tecnología</h4>
+                <p>Contamos con un equipo humano muy bien calificado y abierto a todo tipo de sugerencias, tanto de los clientes como de la directiva de la empresa. Nuestros equipos y nuestra tecnología, están a su servicio en estas labores de alto nivel técnico y cuidado.</p>
+                <a href="#" class="da-link button">Leer más</a>
+                <div class="da-img">
+                    <img src="@Url.Content("~/Content/images/Slider02.jpg")" width="320" alt="image02">
+                </div>
+            </div>
+            <!-- End second slide -->
+            <!-- Start third slide -->
+            <div class="da-slide">
+                <h2>Servicios</h2>
+                <h4>Ofrecemos</h4>
+                <p>Reflotamientos, soldadura y corte submarino, limpieza de casco, mantenimiento y reparación de muelles, inspecciones para seguro, instalación de boyas y fondaderos, redes submarinas, filmaciones submarinas...</p>
+                <a href="#service" class="da-link button">Leer más</a>
+                <div class="da-img">
+                    <img src="@Url.Content("~/Content/images/Slider03.jpg")" width="320" alt="image03">
+                </div>
+            </div>
+            <!-- Start third slide -->
+            <!-- Start cSlide navigation arrows -->
+            <div class="da-arrows">
+                <span class="da-arrows-prev"></span>
+                <span class="da-arrows-next"></span>
+            </div>
+            <!-- End cSlide navigation arrows -->
+        </div>
+    </div>
+</div>
+<!-- End home section -->
+
+<!-- Service section start -->
+@Html.Partial("~/Views/Home/Service.cshtml")
+<!-- Service section end -->
+
+<!-- Portfolio section start -->
+@Html.Partial("~/Views/Home/Portafolio.cshtml")
+<!-- Portfolio section end -->
+
+<!-- About us section start -->
+@Html.Partial("~/Views/Home/About.cshtml")
+<!-- About us section end -->
+
+<!-- Client section start -->
+@Html.Partial("~/Views/Home/Client.cshtml")
+<!-- Client section end -->
+
+<!-- Contact section start -->
+@Html.Partial("~/Views/Home/Contact.cshtml")
+<!-- Contact section edn -->
+
+<!-- Footer section start -->
+<div class="footer">
+    <p>&copy; @DateTime.Now.Year Todos los derechos reservados
+    </p>
+</div>
+<!-- Footer section end -->
+<!-- ScrollUp button start -->
+<div class="scrollup">
+    <a href="#">
+        <i class="icon-up-open"></i>
+    </a>
+</div>
+<!-- ScrollUp button end -->
+
+@section scripts
+{
+    <!-- Include javascript -->
+    <script src="@Url.Content("~/Content/js/jquery.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/js/jquery.mixitup.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/js/bootstrap.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/js/modernizr.custom.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/js/jquery.bxslider.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/js/jquery.cslider.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/js/jquery.placeholder.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/js/jquery.inview.js")"></script>
+    <!-- Load google maps api and call initializeMap function defined in app.js -->
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAs8UP5aLSQyJVAwMqspidsm9Q7Hv1IBGM&callback=initMap">
+    </script>
+    @*<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false&amp;callback=initializeMap"></script>*@
+    
+    <!-- css3-mediaqueries.js for IE8 or older -->
+    <!--[if lt IE 9]>
+        <script src="@Url.Content("~/Content/js/respond.min.js")"></script>
+    <![endif]-->
+    <script type="text/javascript" src="@Url.Content("~/Content/js/app.js")"></script>
+}

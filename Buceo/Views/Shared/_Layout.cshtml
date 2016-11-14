@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <!-- Load Roboto font -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <!-- Load css styles -->
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/css/bootstrap.css")" />
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/css/bootstrap-responsive.css")" />
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/css/style.css")" />
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/css/pluton.css")" />
+    <!--[if IE 7]>
+        <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/css/pluton-ie7.css")" />
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/css/jquery.cslider.css")" />
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/css/jquery.bxslider.css")" />
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/css/animate.css")" />
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="@Url.Content("~/Content/images/ico/apple-touch-icon-144.png")">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="@Url.Content("~/Content/images/ico/apple-touch-icon-114.png")">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="@Url.Content("~/Content/images/apple-touch-icon-72.png")">
+    <link rel="apple-touch-icon-precomposed" href="@Url.Content("~/Content/images/ico/apple-touch-icon-57.png")">
+    <link rel="shortcut icon" href="@Url.Content("~/Content/images/ico/favicon.ico")">
+</head>
+<body>
+    @RenderBody()
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>
