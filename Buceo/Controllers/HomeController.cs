@@ -1,4 +1,5 @@
-﻿using System.Web.Mvc;
+﻿using System;
+using System.Web.Mvc;
 using Buceo.Models;
 
 namespace Buceo.Controllers
@@ -13,12 +14,20 @@ namespace Buceo.Controllers
         [HttpPost]
         public JsonResult EnviarEmail(MensajeEmailModel mensaje)
         {
-            if (ModelState.IsValid)
+            bool success = false;
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    success = true;
+                }
+            }
+            catch (Exception ex)
             {
                 
             }
 
-            return Json(true, JsonRequestBehavior.AllowGet);
+            return Json(success, JsonRequestBehavior.AllowGet);
         }
     }
 }
