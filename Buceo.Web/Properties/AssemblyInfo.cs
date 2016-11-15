@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // La información general sobre un ensamblado se controla mediante el siguiente 
 // conjunto de atributos. Cambie los valores de estos atributos para modificar la información
 // asociada con un ensamblado.
-[assembly: AssemblyTitle("Buceo")]
+[assembly: AssemblyTitle("Buceo.Web")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Buceo")]
+[assembly: AssemblyProduct("Buceo.Web")]
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

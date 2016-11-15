@@ -1,4 +1,4 @@
-﻿namespace Buceo.Models
+﻿namespace Buceo.Web.Models
 {
     public class MensajeEmailModel
     {

@@ -1,9 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Buceo", "Buceo\Buceo.csproj", "{DDC75941-A713-4630-A547-6A6B79922696}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentacion", "Presentacion", "{821F1459-09FC-4A07-B9BB-C9483CA53560}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infraestructura", "Infraestructura", "{4741B965-67DE-46CE-937E-68BD10C38015}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Buceo.Email", "Buceo.Email\Buceo.Email.csproj", "{B581968D-45F0-4C9C-9377-C2C492E275DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Buceo.Web", "Buceo.Web\Buceo.Web.csproj", "{DDC75941-A713-4630-A547-6A6B79922696}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,6 +17,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B581968D-45F0-4C9C-9377-C2C492E275DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B581968D-45F0-4C9C-9377-C2C492E275DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B581968D-45F0-4C9C-9377-C2C492E275DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B581968D-45F0-4C9C-9377-C2C492E275DB}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DDC75941-A713-4630-A547-6A6B79922696}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DDC75941-A713-4630-A547-6A6B79922696}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DDC75941-A713-4630-A547-6A6B79922696}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -18,5 +28,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B581968D-45F0-4C9C-9377-C2C492E275DB} = {4741B965-67DE-46CE-937E-68BD10C38015}
+		{DDC75941-A713-4630-A547-6A6B79922696} = {821F1459-09FC-4A07-B9BB-C9483CA53560}
 	EndGlobalSection
 EndGlobal

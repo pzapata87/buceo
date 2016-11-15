@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Web.Mvc;
-using Buceo.Models;
+using Buceo.Web.Core;
+using Buceo.Web.Models;
 
-namespace Buceo.Controllers
+namespace Buceo.Web.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
         public ActionResult Index()
         {
@@ -19,12 +20,18 @@ namespace Buceo.Controllers
             {
                 if (ModelState.IsValid)
                 {
+                    Email.Email.From(ConfigurationAppSettings.EmailFrom())
+                   .To(ConfigurationAppSettings.EmailTo())
+                   .Subject("Test")
+                   .UseSsl()
+                   .Body("test")
+                   .Send();
                     success = true;
                 }
             }
             catch (Exception ex)
             {
-                
+                LogError(ex);
             }
 
             return Json(success, JsonRequestBehavior.AllowGet);
