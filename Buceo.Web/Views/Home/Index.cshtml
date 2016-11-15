@@ -1,4 +1,5 @@
-﻿@{
+﻿@using Buceo.Web.Models
+@{
     ViewBag.Title = "Serbuvaliente";
 }
 
@@ -98,7 +99,7 @@
 <!-- Client section end -->
 
 <!-- Contact section start -->
-@Html.Partial("~/Views/Home/Contact.cshtml")
+@Html.Partial("~/Views/Home/Contact.cshtml", new MensajeEmailModel())
 <!-- Contact section edn -->
 
 <!-- Footer section start -->

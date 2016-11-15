@@ -1,4 +1,6 @@
-﻿<div id="contact" class="contact">
+﻿@model Buceo.Web.Models.MensajeEmailModel
+
+<div id="contact" class="contact">
     <div class="section secondary-section">
         <div class="container">
             <div class="title">
@@ -16,31 +18,35 @@
                             <strong>Well done!</strong>Tu mensaje ha sido enviado.
                         </div>
                         <div id="errorSend" class="alert alert-error invisible">Ha ocurrido un error.</div>
-                        <form id="contact-form" action="php/mail.php">
+                        @using (Html.BeginForm("EnviarEmail", "Home", new {area = "Administracion"}, FormMethod.Post, new {id = "frmEnviarEmail"}))
+                        {
                             <div class="control-group">
                                 <div class="controls">
-                                    <input class="span12" type="text" id="name" name="name" placeholder="* Su nombre..." />
-                                    <div class="error left-align" id="err-name">Por favor ingrese su nombre.</div>
+                                    @Html.TextBoxFor(model => model.Nombre, new { @class = "span12", @placeholder = "* Su nombre..." })
+                                    @Html.ValidationMessageFor(m => Model.Nombre, "error left-align")
+                                    @*<div class="error left-align" id="err-Nombre">Por favor ingrese su nombre.</div>*@
                                 </div>
                             </div>
                             <div class="control-group">
                                 <div class="controls">
-                                    <input class="span12" type="email" name="email" id="email" placeholder="* Su email..." />
-                                    <div class="error left-align" id="err-email">Por favor ingresa una dirección de correo válida.</div>
+                                    @Html.TextBoxFor(model => model.Email, new { @class = "span12", @placeholder = "* Su email...", @type = "email" })
+                                    @Html.ValidationMessageFor(m => Model.Email, "error left-align")
+                                    @*<div class="error left-align" id="err-Email">Por favor ingresa una dirección de correo válida.</div>*@
                                 </div>
                             </div>
                             <div class="control-group">
                                 <div class="controls">
-                                    <textarea class="span12" name="comment" id="comment" placeholder="* Mensaje..."></textarea>
-                                    <div class="error left-align" id="err-comment">Por favor ingrese su mensaje.</div>
+                                    @Html.TextAreaFor(model => model.Mensaje, new { @class = "span12", @placeholder = "* Mensaje..." })
+                                    @Html.ValidationMessageFor(m => Model.Mensaje, "error left-align")
+                                    @*<div class="error left-align" id="err-Mensaje">Por favor ingrese su mensaje.</div>*@
                                 </div>
                             </div>
                             <div class="control-group">
                                 <div class="controls">
-                                    <button id="send-mail" class="message-btn">Enviar Mensaje</button>
+                                    <button id="btnEnviarEmail" class="message-btn">Enviar Mensaje</button>
                                 </div>
                             </div>
-                        </form>
+                        }
                     </div>
                 </div>
             </div>
