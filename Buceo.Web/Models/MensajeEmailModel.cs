@@ -4,14 +4,14 @@ namespace Buceo.Web.Models
 {
     public class MensajeEmailModel
     {
-        [Required(ErrorMessage = "Nombre es obligatorio")]
+        [Required(ErrorMessage = "Ingrese su nombre.")]
         public string Nombre { get; set; }
 
-        [Required(ErrorMessage = "Email es obligatorio")]
-        [EmailAddress(ErrorMessage = "No es un correo válido")]
+        [Required(ErrorMessage = "Ingrese su email.")]
+        [EmailAddress(ErrorMessage = "Ingrese un email válido.")]
         public string Email{ get; set; }
 
-        [Required(ErrorMessage = "Mensaje es obligatorio")]
+        [Required(ErrorMessage = "Ingrese su mensaje.")]
         public string Mensaje { get; set; }
     }
 }

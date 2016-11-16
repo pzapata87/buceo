@@ -894,3 +894,7 @@ p {
         margin-top:30px;
     }
 }
+/***Stylos Personalizados***/
+.field-validation-error {
+    color: #CF0000;
+}

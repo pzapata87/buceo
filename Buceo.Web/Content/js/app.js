@@ -258,7 +258,7 @@
 //        return false; // stops user browser being directed to the php file
 //});
 
-     $("#btnEnviarEmail").on("click", function() {
+     $("#btnEnviarEmail").on("click", function(e) {
          if (!$("#frmEnviarEmail").valid()) {
              e.preventDefault();
              return;
@@ -378,12 +378,10 @@
 
 //Initialize google map for contact setion with your location.
 
-function initializeMap() {
-
-    var lat = '-12.0437017'; //Set your latitude.
-    var lon = '-77.0947958'; //Set your longitude.
-
-    var centerLon = lon - 0.0105;
+ function initializeMap() {
+     var lat = '-11.979961'; //Set your latitude.
+     var lon = '-77.124954'; //Set your longitude.
+     var centerLon = lon - 0.0105;
 
     var myOptions = {
         scrollwheel: false,
