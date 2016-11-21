@@ -23,7 +23,7 @@
                             <div class="control-group">
                                 <div class="controls">
                                     @Html.TextBoxFor(model => model.Nombre, new { @class = "span12", @placeholder = "* Su nombre..." })
-                                    @Html.ValidationMessageFor(m => Model.Nombre, "", new { @class = "error left-align" })
+                                    @Html.ValidationMessageFor(m => Model.Nombre)
                                     @*<div class="error left-align" id="err-Nombre">Por favor ingrese su nombre.</div>*@
                                 </div>
                             </div>
